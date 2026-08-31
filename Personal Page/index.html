@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cocol – Página Personal</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,500&family=Source+Sans+3:wght@400;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap"
+        rel="stylesheet">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+
+<body>
+
+    <!-- ============ NAV ============ -->
+    <nav class="navbar navbar-expand-md navbar-dark sticky-top site-navbar">
+        <div class="container">
+            <a class="navbar-brand" href="#inicio">El1ZaBetH Personal Page<span class="text-clay">.</span></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu"
+                aria-controls="navMenu" aria-expanded="false" aria-label="Abrir menú">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navMenu">
+                <ul class="nav nav-tabs ms-auto" id="mainNav">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#inicio">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#academico">Académico</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#hobbies">Pasatiempos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#cripto">Cryptography</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <!-- ============ HERO ============ -->
+        <section id="inicio" class="container py-5 my-4">
+            <div class="row align-items-center g-5">
+                <div class="col-md-4 col-lg-3 text-center">
+                    <img src="img/yo.jpeg" alt="Foto" id="heroPhoto" class="img-fluid hero-photo">
+                </div>
+                <div class="col-md-8 col-lg-9">
+                    <p class="eyebrow">Cocol</p>
+                    <h1 class="hero-name">Elizabeth Flores Jimenez</h1>
+                    <p class="hero-cipher" id="cipherText" data-plain="Yo."></p>
+                    <p class="hero-desc">
+                        Hola, mi nombre es Elizabeth, tengo 21 años, nací en un municipio del Estado de México.
+                        Soy estudiante de la carrera de Ingeniería en Sistemas Computacionales, actualmente estoy
+                        cursando el 7° semestre.
+                        En este momento de mi carrera, me interesa la criptografía. Tengo un perrhijo llamado Cocol, en
+                        muy juguetón y la mayoria de mi tiempo
+                        cuando estoy en casa trato de pasarlo con él. Amo a mi familia y espero construir un futuro
+                        exitoso.
+                    </p>
+                    <div class="d-flex flex-wrap gap-3">
+                        <a href="docs/CV_Elizabeth_Flores_Jimenez.pdf" target="_blank"  download class="btn btn-primary" >Descargar CV</a>
+                        <div id="liveAlertPlaceholder"></div>
+                        <button type="button" class="btn btn-primary" id="liveAlertBtn">Ver llave pública</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ ACADÉMICO ============ -->
+        <section id="academico" class="section-block bg-sage-light">
+            <div class="container">
+                <div class="row g-4 align-items-start">
+                    <div class="col-lg-7">
+                        <h2 class="section-title"><span class="section-num">01</span> Formación académica</h2>
+                        <p class="section-intro">Desde secundaria hasta la actualidad.</p>
+
+                        <ol class="timeline list-unstyled">
+                            <li class="timeline-item">
+                                <span class="timeline-period">2017 – 2020</span>
+                                <h3 class="h5">Esc. Sec. Oficial No. 0837 "Pablo Latapi Sarre"</h3>
+                            </li>
+                            <li class="timeline-item">
+                                <span class="timeline-period">2020 – 2023</span>
+                                <h3 class="h5">Centro de Estudios Científicos y Tecnológicos No. 3 "Estanislao Ramirez
+                                    Ruíz"</h3>
+                                <p class="mb-0">Técnico en Computación</p>
+                            </li>
+                            <li class="timeline-item">
+                                <span class="timeline-period">2023 – actualidad</span>
+                                <h3 class="h5">Escuela Superior de Cómputo — Ingeniería en Sistemas Computacionales</h3>
+                            </li>
+                        </ol>
+                    </div>
+
+                    <div class="col-lg-5">
+                        <div class="projects-panel">
+                            <h3 class="h5 mb-3">Proyectos destacados</h3>
+
+                            <div class="project-card">
+                                <h4 class="h6 mb-1">BrotaFuturo</h4>
+                                <p class="project-line">Rediseño de la página de servicio social del IPN para mejorar su
+                                    visibilidad y gestión.</p>
+                            </div>
+
+                            <div class="project-card">
+                                <h4 class="h6 mb-1">FarmaFácil</h4>
+                                <p class="project-line">Sistema de gestión de una farmacia, con base de datos en MySQL.
+                                </p>
+                            </div>
+
+                            <div class="project-card">
+                                <h4 class="h6 mb-1">Tatto4U</h4>
+                                <p class="project-line">Administración de un estudio de tatuajes, desarrollado con
+                                    metodología ágil PUA.</p>
+                            </div>
+
+                            <div class="project-card project-card--cripto">
+                                <h4 class="h6 mb-1">Tiny Block Cipher</h4>
+                                <p class="project-line">Cifrador de bloques ligero con modo de operación CTR.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ HOBBIES ============ -->
+        <section id="hobbies" class="section-block">
+            <div class="container">
+                <h2 class="section-title"><span class="section-num">02</span> Pasatiempos</h2>
+
+                <div class="row g-4">
+                    <div class="col-md-4">
+                        <div class="card h-100 app-card">
+                            <img src="img/1.jfif" class="card-img-top" alt="">
+                            <div class="card-body">
+                                <h3 class="h5 card-title">Jugar roblox</h3>
+                                <p class="card-text">En el mínimo tiempo libre me gusta jugar roblox.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card h-100 app-card">
+                            <img src="img/3.jfif" class="card-img-top" alt="">
+                            <div class="card-body">
+                                <h3 class="h5 card-title">Jugar con Cocol</h3>
+                                <p class="card-text">Cuando estoy en mi casa juego a las escondidas con el o le aviento
+                                    sus juguetes para que corra.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card h-100 app-card">
+                            <img src="img/2.jfif" class="card-img-top" alt="">
+                            <div class="card-body">
+                                <h3 class="h5 card-title">Escuchar música</h3>
+                                <p class="card-text">En este momento me gusta descubrir música en ingles de los 80's.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ CRIPTOGRAFÍA ============ -->
+        <section id="cripto" class="section-block section-cripto">
+            <div class="container">
+                <h2 class="section-title text-parchment"><span class="section-num text-sage">03</span> Criptografía
+                    Clásica</h2>
+                <p class="section-intro text-light-gray">Tres datos curiosos de criptografía que me parecen
+                    interesantes.</p>
+
+                <div class="row g-4">
+                    <div class="col-md-4">
+                        <div class="cipher-card h-100">
+                            <p class="cipher-label">DATO_01</p>
+                            <h3 class="h5">La escítala espartana</h3>
+                            <p class="mb-0">Uno de los cifrados más antiguos que se conocen (~s. V a.C.). Los espartanos
+                                enrollaban una tira de cuero alrededor de un bastón de grosor específico y escribían el
+                                mensaje a lo largo de él. Al desenrollar la tira, las letras quedaban desordenadas; solo
+                                otro bastón del mismo diámetro podía volver a alinearlas. Es un cifrado por
+                                <em>transposición</em>, no por sustitución.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="cipher-card h-100">
+                            <p class="cipher-label">DATO_02</p>
+                            <h3 class="h5">El cifrado César</h3>
+                            <p class="mb-0">Julio César lo usaba para enviar mensajes militares: desplazaba cada letra
+                                3 posiciones en el alfabeto (A→D, B→E...). Aunque hoy se rompe en segundos por fuerza
+                                bruta
+                                (solo hay 25 desplazamientos posibles), en su época era suficiente porque la mayoría de
+                                sus
+                                enemigos ni siquiera sabía leer.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="cipher-card h-100">
+                            <p class="cipher-label">DATO_03</p>
+                            <h3 class="h5">El cifrado Vigenère</h3>
+                            <p class="mb-0">Publicado en 1586, se le llamó <em>"le chiffre indéchiffrable"</em> (el
+                                cifrado
+                                indescifrable) porque usa una palabra clave para aplicar varios desplazamientos César
+                                distintos a lo largo del mensaje, rompiendo el análisis de frecuencias simple. Se
+                                consideró
+                                irrompible durante casi 300 años, hasta que Kasiski publicó un método para atacarlo en
+                                1863.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer text-center py-4">
+        <div class="footer-icons mb-2">
+            <a href="https://www.instagram.com/3l1z4b3thfj/" target="_blank" rel="noopener" aria-label="Instagram"
+                class="footer-icon">
+                <i class="bi bi-instagram"></i>
+            </a>
+            <span class="footer-icon-text">
+                <i class="bi bi-envelope-fill"></i> floresjimeneze3@gmail.com
+            </span>
+        </div>
+        <p class="mb-0"> 2026 Elizabeth Flores Jimenez</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
