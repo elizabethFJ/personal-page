@@ -1,0 +1,335 @@
+/* =========================================================
+   TOKENS (sobre Bootstrap)
+========================================================= */
+:root {
+  --ink:        #1E2A35;
+  --ink1:        #33424f;
+  --slate:      #3C5A76;
+  --slate-dark: #2C4359;
+  --slate-light:#6483A0;
+  --sage:       #6E8B5E;
+  --sage-light: #E7ECE1;
+  --clay:       #A9714B;
+  --clay-light: #F0E3D6;
+  --parchment:  #F6F2E9;
+  --paper:      #FFFDF8;
+  --line:       #DDD3C0;
+
+  --font-display: "Fraunces", serif;
+  --font-body:    "Source Sans 3", sans-serif;
+  --font-mono:    "IBM Plex Mono", monospace;
+  --bs-primary: var(--slate);
+  --bs-primary-rgb: 60, 90, 118;
+  --bs-body-font-family: var(--font-body);
+  --bs-body-color: var(--ink);
+  --bs-body-bg: var(--parchment);
+  --bs-link-color: var(--slate);
+  --bs-link-hover-color: var(--slate-dark);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; }
+}
+
+html { scroll-behavior: smooth; }
+
+:focus-visible {
+  outline: 3px solid var(--clay);
+  outline-offset: 3px;
+}
+
+.text-clay { color: var(--clay); }
+.text-sage { color: var(--sage); }
+.text-parchment { color: var(--parchment); }
+.text-light-gray { color: #b9c2c9; }
+.bg-sage-light { background-color: var(--sage-light); }
+
+/* =========================================================
+   NAV
+========================================================= */
+.site-navbar {
+  background-color: var(--slate);
+}
+.navbar-brand {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 1.4rem;
+}
+.mono-nav {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+}
+.mono-nav .nav-link {
+  color: var(--parchment);
+  opacity: 0.85;
+}
+.mono-nav .nav-link:hover { opacity: 1; }
+
+.nav-cta {
+  background: var(--clay);
+  color: var(--paper) !important;
+  border-radius: 999px;
+  padding: 0.35rem 1rem;
+  font-family: var(--font-mono);
+}
+.nav-cta:hover { background: #8f5c3b; color: var(--paper); }
+
+.nav-tabs {
+  border-bottom: 0;
+  gap: 0.3rem;
+}
+.nav-tabs .nav-link {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  color: var(--parchment);
+  opacity: 0.78;
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid transparent;
+  border-radius: 0;
+  padding: 0.55rem 0.85rem;
+}
+.nav-tabs .nav-link:hover {
+  opacity: 1;
+  border-color: rgba(255,255,255,0.35);
+  background: transparent;
+  color: var(--parchment);
+}
+.nav-tabs .nav-link.active {
+  opacity: 1;
+  color: var(--paper);
+  background: transparent;
+  border-color: var(--clay);
+}
+
+:root { --content-max: 1300px; }
+
+.container {
+  max-width: var(--content-max);
+  padding-left: clamp(1.25rem, 4vw, 2.5rem);
+  padding-right: clamp(1.25rem, 4vw, 2.5rem);
+}
+
+/* =========================================================
+   HERO
+========================================================= */
+.hero-photo {
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 50% 50% 46% 54% / 54% 46% 54% 46%;
+  border: 3px solid var(--clay);
+  background: var(--paper);
+}
+
+.eyebrow {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--slate-light);
+  margin-bottom: 0.4rem;
+}
+
+.hero-name {
+  font-family: var(--font-display);
+  font-size: clamp(2.2rem, 5vw, 3.4rem);
+  margin-bottom: 0.8rem;
+}
+
+.hero-cipher {
+  font-family: var(--font-mono);
+  font-size: 1rem;
+  color: var(--clay);
+  min-height: 1.6em;
+  margin-bottom: 1.2rem;
+}
+
+.hero-desc {
+  max-width: 60ch;
+  color: #3d4a54;
+}
+
+/* =========================================================
+   SECTIONS
+========================================================= */
+.section-block { padding: 4.5rem 0; }
+
+.section-cripto { background: var(--ink1); color: var(--parchment); }
+
+.section-title {
+  font-family: var(--font-display);
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  display: flex;
+  align-items: baseline;
+  gap: 0.8rem;
+  margin-bottom: 0.3rem;
+}
+.section-num { font-family: var(--font-mono); font-size: 0.9rem; color: var(--clay); }
+.section-intro { color: #5a6570; margin-bottom: 2.2rem; }
+
+/* =========================================================
+   TIMELINE
+========================================================= */
+.timeline {
+  border-left: 2px solid var(--sage);
+  padding-left: 0;
+}
+.timeline-item {
+  position: relative;
+  padding: 0 0 2rem 1.6rem;
+}
+.timeline-item::before {
+  content: "";
+  position: absolute;
+  left: -7px;
+  top: 4px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--sage);
+  border: 2px solid var(--parchment);
+}
+.timeline-period {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--slate);
+  display: block;
+}
+.timeline-item h3 { font-family: var(--font-display); margin: 0.2rem 0 0.3rem; }
+
+/* =========================================================
+   PROYECTOS DESTACADOS (junto al timeline académico)
+========================================================= */
+.projects-panel {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 1.5rem 1.5rem 0.5rem;
+}
+
+.project-card {
+  border-left: 3px solid var(--slate);
+  padding: 0 0 1rem 1rem;
+  margin-bottom: 1rem;
+}
+.project-card:last-child { margin-bottom: 0.5rem; }
+
+.project-card--cripto { border-left-color: var(--clay); }
+
+.project-card h4 { font-family: var(--font-display); }
+
+.project-line {
+  font-size: 0.9rem;
+  color: #5a6570;
+  margin: 0;
+}
+
+/* =========================================================
+   CONTACT PILLS
+========================================================= */
+.contact-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  padding: 0.7rem 1.3rem;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 600;
+  color: var(--ink);
+  transition: border-color 0.2s ease, transform 0.2s ease;
+}
+.contact-pill:hover {
+  border-color: var(--slate);
+  transform: translateY(-2px);
+  color: var(--ink);
+}
+.contact-pill-icon { font-family: var(--font-mono); color: var(--slate); }
+
+/* =========================================================
+   CARDS (hobbies) — override Bootstrap defaults
+========================================================= */
+.app-card {
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  overflow: hidden;
+  background: var(--paper);
+}
+.app-card .card-title { font-family: var(--font-display); }
+.app-card .card-img-top { aspect-ratio: 4/3; object-fit: cover; background: var(--clay-light); }
+
+/* =========================================================
+   CIPHER CARDS (criptografía)
+========================================================= */
+.cipher-card {
+  background: #263846;
+  border: 1px solid #3a4f5f;
+  border-radius: 14px;
+  padding: 1.6rem;
+}
+.cipher-label {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  color: var(--sage);
+  margin-bottom: 0.6rem;
+}
+.cipher-card h3 { font-family: var(--font-display); color: var(--paper); }
+.cipher-card p { color: #c7cfd5; }
+
+/* =========================================================
+   BUTTONS (descargas)
+========================================================= */
+.btn-primary-custom {
+  background: var(--slate);
+  border-color: var(--slate);
+  color: var(--paper);
+  border-radius: 999px;
+}
+.btn-primary-custom:hover { background: var(--slate-dark); border-color: var(--slate-dark); color: var(--paper); }
+
+.btn-outline-custom {
+  background: transparent;
+  border: 2px solid var(--clay);
+  color: var(--clay);
+  border-radius: 999px;
+}
+.btn-outline-custom:hover { background: var(--clay); border-color: var(--clay); color: var(--paper); }
+
+/* =========================================================
+   FOOTER
+========================================================= */
+.footer {
+  background: var(--ink);
+  color: var(--parchment);
+  font-size: 0.85rem;
+}
+ 
+.footer-icons {
+  display: flex;
+  justify-content: center;
+  gap: 1.2rem;
+}
+.footer-icon {
+  color: var(--parchment);
+  font-size: 1.4rem;
+  opacity: 0.85;
+  transition: opacity 0.2s ease, color 0.2s ease, transform 0.2s ease;
+}
+.footer-icon:hover {
+  opacity: 1;
+  color: var(--clay);
+  transform: translateY(-2px);
+}
+ 
+.footer-icon-text {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--parchment);
+  opacity: 0.85;
+  font-size: 0.95rem;
+}
+.footer-icon-text i { font-size: 1.4rem; }
+ 
