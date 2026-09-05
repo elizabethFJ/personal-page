@@ -41,6 +41,9 @@
                     <li class="nav-item">
                         <a class="nav-link" href="#cripto">Cryptography</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#video">Video</a>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -51,25 +54,34 @@
         <section id="inicio" class="container py-5 my-4">
             <div class="row align-items-center g-5">
                 <div class="col-md-4 col-lg-3 text-center">
-                    <img src="img/yo.jpeg" alt="Foto" id="heroPhoto" class="img-fluid hero-photo">
+                    <img src="img/yo.jpeg" alt="Foto" id="heroPhoto" class="img-fluid hero-photo rounded-circle shadow-lg">
                 </div>
                 <div class="col-md-8 col-lg-9">
-                    <p class="eyebrow">Cocol</p>
-                    <h1 class="hero-name">Elizabeth Flores Jimenez</h1>
-                    <p class="hero-cipher" id="cipherText" data-plain="Yo."></p>
-                    <p class="hero-desc">
+                    <!-- Eyebrow estilizado -->
+                    <p class="eyebrow text-uppercase tracking-wider text-muted mb-1">
+                        <i class="bi bi-terminal"></i> <span class="badge bg-secondary bg-opacity-25 text-dark">Cocol</span>
+                    </p>
+                    
+                    <!-- Nombre estéticamente destacado -->
+                    <h1 class="hero-name display-3 fw-bold my-2" style="font-family: 'Fraunces', serif; letter-spacing: -0.5px;">
+                        Elizabeth <span class="text-primary">Flores Jimenez</span>
+                    </h1>
+
+                    <p class="hero-cipher text-monospace text-muted mb-3" id="cipherText" data-plain="Yo."></p>
+
+                    <p class="hero-desc fs-5 leading-relaxed text-secondary">
                         Hola, mi nombre es Elizabeth, tengo 21 años, nací en un municipio del Estado de México.
                         Soy estudiante de la carrera de Ingeniería en Sistemas Computacionales, actualmente estoy
                         cursando el 7° semestre.
-                        En este momento de mi carrera, me interesa la criptografía. Tengo un perrhijo llamado Cocol, en
-                        muy juguetón y la mayoria de mi tiempo
-                        cuando estoy en casa trato de pasarlo con él. Amo a mi familia y espero construir un futuro
-                        exitoso.
+                        En este momento de mi carrera, me interesa la criptografía. Tengo un perrhijo llamado Cocol, es
+                        muy juguetón y la mayoría de mi tiempo cuando estoy en casa trato de pasarlo con él. Amo a mi familia y espero construir un futuro exitoso.
                     </p>
-                    <div class="d-flex flex-wrap gap-3">
-                        <a href="docs/CV_Elizabeth_Flores_Jimenez.pdf" target="_blank"  download class="btn btn-primary" >Descargar CV</a>
+                    <div class="d-flex flex-wrap gap-3 mt-4">
+                        <a href="docs/CV_Elizabeth_Flores_Jimenez.pdf" target="_blank" download class="btn btn-primary px-4 py-2">Descargar CV</a>
                         <div id="liveAlertPlaceholder"></div>
-                        <button type="button" class="btn btn-primary" id="liveAlertBtn">Ver llave pública</button>
+                        <a href="docs/llave_pub.pem" download="llave_publica.asc" class="btn btn-outline-primary px-4 py-2" id="liveAlertBtn">
+                            <i class="bi bi-key-fill me-1"></i> Ver llave pública
+                        </a>
                     </div>
                 </div>
             </div>
@@ -90,8 +102,7 @@
                             </li>
                             <li class="timeline-item">
                                 <span class="timeline-period">2020 – 2023</span>
-                                <h3 class="h5">Centro de Estudios Científicos y Tecnológicos No. 3 "Estanislao Ramirez
-                                    Ruíz"</h3>
+                                <h3 class="h5">Centro de Estudios Científicos y Tecnológicos No. 3 "Estanislao Ramirez Ruíz"</h3>
                                 <p class="mb-0">Técnico en Computación</p>
                             </li>
                             <li class="timeline-item">
@@ -107,20 +118,17 @@
 
                             <div class="project-card">
                                 <h4 class="h6 mb-1">BrotaFuturo</h4>
-                                <p class="project-line">Rediseño de la página de servicio social del IPN para mejorar su
-                                    visibilidad y gestión.</p>
+                                <p class="project-line">Rediseño de la página de servicio social del IPN para mejorar su visibilidad y gestión.</p>
                             </div>
 
                             <div class="project-card">
                                 <h4 class="h6 mb-1">FarmaFácil</h4>
-                                <p class="project-line">Sistema de gestión de una farmacia, con base de datos en MySQL.
-                                </p>
+                                <p class="project-line">Sistema de gestión de una farmacia, con base de datos en MySQL.</p>
                             </div>
 
                             <div class="project-card">
                                 <h4 class="h6 mb-1">Tatto4U</h4>
-                                <p class="project-line">Administración de un estudio de tatuajes, desarrollado con
-                                    metodología ágil PUA.</p>
+                                <p class="project-line">Administración de un estudio de tatuajes, desarrollado con metodología ágil PUA.</p>
                             </div>
 
                             <div class="project-card project-card--cripto">
@@ -141,7 +149,7 @@
                 <div class="row g-4">
                     <div class="col-md-4">
                         <div class="card h-100 app-card">
-                            <img src="img/1.jfif" class="card-img-top" alt="">
+                            <img src="img/1.jfif" class="card-img-top" alt="Roblox">
                             <div class="card-body">
                                 <h3 class="h5 card-title">Jugar roblox</h3>
                                 <p class="card-text">En el mínimo tiempo libre me gusta jugar roblox.</p>
@@ -150,21 +158,19 @@
                     </div>
                     <div class="col-md-4">
                         <div class="card h-100 app-card">
-                            <img src="img/3.jfif" class="card-img-top" alt="">
+                            <img src="img/3.jfif" class="card-img-top" alt="Cocol">
                             <div class="card-body">
                                 <h3 class="h5 card-title">Jugar con Cocol</h3>
-                                <p class="card-text">Cuando estoy en mi casa juego a las escondidas con el o le aviento
-                                    sus juguetes para que corra.</p>
+                                <p class="card-text">Cuando estoy en mi casa juego a las escondidas con el o le aviento sus juguetes para que corra.</p>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-4">
                         <div class="card h-100 app-card">
-                            <img src="img/2.jfif" class="card-img-top" alt="">
+                            <img src="img/2.jfif" class="card-img-top" alt="Música">
                             <div class="card-body">
                                 <h3 class="h5 card-title">Escuchar música</h3>
-                                <p class="card-text">En este momento me gusta descubrir música en ingles de los 80's.
-                                </p>
+                                <p class="card-text">En este momento me gusta descubrir música en ingles de los 80's.</p>
                             </div>
                         </div>
                     </div>
@@ -175,10 +181,8 @@
         <!-- ============ CRIPTOGRAFÍA ============ -->
         <section id="cripto" class="section-block section-cripto">
             <div class="container">
-                <h2 class="section-title text-parchment"><span class="section-num text-sage">03</span> Criptografía
-                    Clásica</h2>
-                <p class="section-intro text-light-gray">Tres datos curiosos de criptografía que me parecen
-                    interesantes.</p>
+                <h2 class="section-title text-parchment"><span class="section-num text-sage">03</span> Criptografía Clásica</h2>
+                <p class="section-intro text-light-gray">Tres datos curiosos de criptografía que me parecen interesantes.</p>
 
                 <div class="row g-4">
                     <div class="col-md-4">
@@ -199,10 +203,8 @@
                             <h3 class="h5">El cifrado César</h3>
                             <p class="mb-0">Julio César lo usaba para enviar mensajes militares: desplazaba cada letra
                                 3 posiciones en el alfabeto (A→D, B→E...). Aunque hoy se rompe en segundos por fuerza
-                                bruta
-                                (solo hay 25 desplazamientos posibles), en su época era suficiente porque la mayoría de
-                                sus
-                                enemigos ni siquiera sabía leer.</p>
+                                bruta (solo hay 25 desplazamientos posibles), en su época era suficiente porque la mayoría de
+                                sus enemigos ni siquiera sabía leer.</p>
                         </div>
                     </div>
                     <div class="col-md-4">
@@ -210,30 +212,51 @@
                             <p class="cipher-label">DATO_03</p>
                             <h3 class="h5">El cifrado Vigenère</h3>
                             <p class="mb-0">Publicado en 1586, se le llamó <em>"le chiffre indéchiffrable"</em> (el
-                                cifrado
-                                indescifrable) porque usa una palabra clave para aplicar varios desplazamientos César
+                                cifrado indescifrable) porque usa una palabra clave para aplicar varios desplazamientos César
                                 distintos a lo largo del mensaje, rompiendo el análisis de frecuencias simple. Se
-                                consideró
-                                irrompible durante casi 300 años, hasta que Kasiski publicó un método para atacarlo en
+                                consideró irrompible durante casi 300 años, hasta que Kasiski publicó un método para atacarlo en
                                 1863.</p>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
+
+        <!-- ============ VIDEO ============ -->
+<section id="video" class="section-block section-video">
+    <div class="container">
+        <h2 class="section-title text-parchment"><span class="section-num text-sage">04</span> Video</h2>
+        <p class="section-intro text-light-gray">Un pequeño vistazo en video.</p>
+
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <div class="video-card">
+                    <div class="ratio ratio-16x9">
+                        <video controls preload="metadata">
+                            <source src="img/video1.mp4" type="video/mp4">
+                            Tu navegador no soporta la reproducción de video.
+                        </video>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
     </main>
 
     <footer class="footer text-center py-4">
-        <div class="footer-icons mb-2">
-            <a href="https://www.instagram.com/3l1z4b3thfj/" target="_blank" rel="noopener" aria-label="Instagram"
-                class="footer-icon">
+        <div class="footer-icons mb-2 d-flex justify-content-center align-items-center gap-3">
+            <a href="https://www.instagram.com/3l1z4b3thfj/" target="_blank" rel="noopener" aria-label="Instagram" class="footer-icon fs-4">
                 <i class="bi bi-instagram"></i>
             </a>
-            <span class="footer-icon-text">
+            <a href="https://github.com/elizabethFJ" target="_blank" rel="noopener" aria-label="GitHub" class="footer-icon fs-4">
+                <i class="bi bi-github"></i>
+            </a>
+            <span class="footer-icon-text ms-2">
                 <i class="bi bi-envelope-fill"></i> floresjimeneze3@gmail.com
             </span>
         </div>
-        <p class="mb-0"> 2026 Elizabeth Flores Jimenez</p>
+        <p class="mb-0">© 2026 Elizabeth Flores Jimenez</p>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>

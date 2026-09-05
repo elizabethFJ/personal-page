@@ -3,7 +3,7 @@
 ========================================================= */
 :root {
   --ink:        #1E2A35;
-  --ink1:        #33424f;
+  --ink1:       #33424f;
   --slate:      #3C5A76;
   --slate-dark: #2C4359;
   --slate-light:#6483A0;
@@ -41,7 +41,7 @@ html { scroll-behavior: smooth; }
 .text-clay { color: var(--clay); }
 .text-sage { color: var(--sage); }
 .text-parchment { color: var(--parchment); }
-.text-light-gray { color: #b9c2c9; }
+.text-light-gray { color: #5a6570; }
 .bg-sage-light { background-color: var(--sage-light); }
 
 /* =========================================================
@@ -111,8 +111,16 @@ html { scroll-behavior: smooth; }
 }
 
 /* =========================================================
-   HERO
+   HERO (Con fondo ligeramente más oscuro)
 ========================================================= */
+.hero-card {
+  background-color: var(--clay-light);
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  padding: clamp(1.5rem, 3vw, 2.5rem);
+  box-shadow: 0 8px 24px rgba(30, 42, 53, 0.04);
+}
+
 .hero-photo {
   aspect-ratio: 1 / 1;
   object-fit: cover;
@@ -126,13 +134,14 @@ html { scroll-behavior: smooth; }
   font-size: 0.78rem;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: var(--slate-light);
+  color: var(--slate);
   margin-bottom: 0.4rem;
 }
 
 .hero-name {
   font-family: var(--font-display);
   font-size: clamp(2.2rem, 5vw, 3.4rem);
+  color: var(--ink);
   margin-bottom: 0.8rem;
 }
 
@@ -145,16 +154,14 @@ html { scroll-behavior: smooth; }
 }
 
 .hero-desc {
-  max-width: 60ch;
-  color: #3d4a54;
+  max-width: 70ch;
+  color: var(--ink1);
 }
 
 /* =========================================================
    SECTIONS
 ========================================================= */
 .section-block { padding: 4.5rem 0; }
-
-.section-cripto { background: var(--ink1); color: var(--parchment); }
 
 .section-title {
   font-family: var(--font-display);
@@ -163,6 +170,7 @@ html { scroll-behavior: smooth; }
   align-items: baseline;
   gap: 0.8rem;
   margin-bottom: 0.3rem;
+  color: var(--ink);
 }
 .section-num { font-family: var(--font-mono); font-size: 0.9rem; color: var(--clay); }
 .section-intro { color: #5a6570; margin-bottom: 2.2rem; }
@@ -198,7 +206,7 @@ html { scroll-behavior: smooth; }
 .timeline-item h3 { font-family: var(--font-display); margin: 0.2rem 0 0.3rem; }
 
 /* =========================================================
-   PROYECTOS DESTACADOS (junto al timeline académico)
+   PROYECTOS DESTACADOS
 ========================================================= */
 .projects-panel {
   background: var(--paper);
@@ -248,7 +256,7 @@ html { scroll-behavior: smooth; }
 .contact-pill-icon { font-family: var(--font-mono); color: var(--slate); }
 
 /* =========================================================
-   CARDS (hobbies) — override Bootstrap defaults
+   CARDS (hobbies)
 ========================================================= */
 .app-card {
   border: 1px solid var(--line);
@@ -260,26 +268,72 @@ html { scroll-behavior: smooth; }
 .app-card .card-img-top { aspect-ratio: 4/3; object-fit: cover; background: var(--clay-light); }
 
 /* =========================================================
-   CIPHER CARDS (criptografía)
+   CIPHER CARDS (Criptografía - Versión Clara)
 ========================================================= */
+.section-cripto { 
+  background-color: var(--sage-light); 
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
 .cipher-card {
-  background: #263846;
-  border: 1px solid #3a4f5f;
+  background: var(--paper);
+  border: 1px solid var(--line);
   border-radius: 14px;
   padding: 1.6rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
 }
 .cipher-label {
   font-family: var(--font-mono);
   font-size: 0.75rem;
   letter-spacing: 0.1em;
-  color: var(--sage);
+  color: var(--clay);
   margin-bottom: 0.6rem;
+  font-weight: 600;
 }
-.cipher-card h3 { font-family: var(--font-display); color: var(--paper); }
-.cipher-card p { color: #c7cfd5; }
+.cipher-card h3 { font-family: var(--font-display); color: var(--ink); }
+.cipher-card p { color: var(--ink1); }
 
 /* =========================================================
-   BUTTONS (descargas)
+   VIDEO SECTION (Adaptada a Fondo Oscuro)
+========================================================= */
+.section-video {
+  background-color: var(--ink1);
+  border-top: 1px solid var(--slate);
+  border-bottom: 1px solid var(--slate);
+}
+
+.section-video .section-title {
+  color: var(--parchment);
+}
+
+.section-video .section-num {
+  color: var(--clay-light);
+}
+
+.section-video .section-intro {
+  color: var(--clay-light);
+  opacity: 0.85;
+}
+
+.video-card {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 1.25rem;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+}
+
+.video-card video {
+  border-radius: 8px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  background-color: var(--ink);
+}
+
+/* =========================================================
+   BUTTONS
 ========================================================= */
 .btn-primary-custom {
   background: var(--slate);
@@ -332,4 +386,3 @@ html { scroll-behavior: smooth; }
   font-size: 0.95rem;
 }
 .footer-icon-text i { font-size: 1.4rem; }
- 
